@@ -1,5 +1,10 @@
 import java.util.Scanner;
 
+/*
+Faça um Programa que crie um vetor de 5 números inteiros. Em seguida, mostre a 
+soma, a multiplicação e os números 
+*/
+
 public class MediaAlunos {
 
     public static void main(String[] args) {
