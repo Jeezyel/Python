@@ -8,7 +8,7 @@ soma, a multiplicação e os números
 public class MediaAlunos {
 
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+        Scanner leia = new Scanner(System.in);
         double[] medias = new double[10];
         int contadorAprovados = 0;
 
@@ -20,7 +20,7 @@ public class MediaAlunos {
 
             for (int j = 0; j < 4; j++) {
                 System.out.print("Digite a nota " + (j + 1) + " do aluno " + (i + 1) + ": ");
-                double nota = scanner.nextDouble();
+                double nota = leia.nextDouble();
                 soma += nota;
             }
 
@@ -32,5 +32,7 @@ public class MediaAlunos {
         }
 
         System.out.println("Quantidade de alunos com média maior ou igual a 7.0: " + contadorAprovados);
+
+        leia.close();
     }
 }

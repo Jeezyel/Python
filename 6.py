@@ -1,7 +1,7 @@
 medias = []
 contador_aprovados = 0
 
-print("Digite as notas dos 10 alunos:")
+print('Digite as notas dos 10 alunos: ' )
 
 # Lê as notas de cada aluno e calcula a média
 for i in range(10):
@@ -17,4 +17,4 @@ for i in range(10):
     if media >= 7.0:
         contador_aprovados += 1
 
-print("Quantidade de alunos com média maior ou igual a 7.0:", contador_aprovados)
+print('Quantidade de alunos com média maior ou igual a 7.0: ', contador_aprovados)
