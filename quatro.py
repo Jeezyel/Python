@@ -1,38 +1,24 @@
-import java.util.ArrayList;
-import java.util.Scanner;
-
-public class teste{
-    static int valor[] = new int[5];;
-    public static void main(String[] args) {
-    Scanner leitor = new Scanner(System.in);
-
-    String consoantes[] = {"B" ,"C" ,"D" ,"F" ,"G" ,"H" ,"J" ,"K" ,"L" ,"M" ,"N" ,"O" ,"P" , "Q" ,"R" ,"S" ,"T" ,"V" ,"W" ,"X" ,"Y" ,"Z" };
-    String letras[] = new String[10];
-    Integer quantidadeConsoantes = 0;
-
-    for (int j = 0; j < 10 ; j++) {
-
-        System.out.println("informe uma letra");
-        letras[j] = leitor.next();
-    
-    }
-
-    ArrayList<String> consoantesSemelhantes = null;
-    
-    for (int i = 0; i < 10; i++) {
-        for (int j = 0; j < consoantes.length; j++) {
-            if (letras[i].toUpperCase() != consoantes[j]) {
-                consoantesSemelhantes.add(letras[i]);
-
-                quantidadeConsoantes++;
-            }
-        }
-    }
-
-    System.out.println("consoantes foram lidas: " + consoantesSemelhantes );
-    System.out.println("quantidade lidas: " + quantidadeConsoantes );
-
-}
+def is_vowel(c):
+    c = c.lower()
+    return c == 'a' or c == 'e' or c == 'i' or c == 'o' or c == 'u'
 
 
-}
+vetor = []
+
+print("Digite 10 caracteres:")
+
+# Lê os caracteres e armazena na lista
+for _ in range(10):
+    vetor.append(input())
+
+contador_consoantes = 0
+consoantes = []
+
+# Verifica se cada caractere é uma consoante e conta e armazena as consoantes
+for c in vetor:
+    if c.isalpha() and not is_vowel(c):
+        contador_consoantes += 1
+        consoantes.append(c)
+
+print("Quantidade de consoantes:", contador_consoantes)
+print("Consoantes encontradas:", " ".join(consoantes))
