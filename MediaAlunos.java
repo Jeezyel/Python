@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.Scanner;
 
 /*
@@ -9,29 +10,22 @@ public class MediaAlunos {
 
     public static void main(String[] args) {
         Scanner leia = new Scanner(System.in);
-        double[] medias = new double[10];
-        int contadorAprovados = 0;
+       ArrayList<Double> notas = new ArrayList<Double>();
 
-        System.out.println("Digite as notas dos 10 alunos:");
+       Boolean finalizar = true;
+        while(finalizar){
+            System.out.println("infome um numero: ");
+            notas.add(leia.nextDouble());
 
-        // Lê as notas de cada aluno e calcula a média
-        for (int i = 0; i < medias.length; i++) {
-            double soma = 0;
-
-            for (int j = 0; j < 4; j++) {
-                System.out.print("Digite a nota " + (j + 1) + " do aluno " + (i + 1) + ": ");
-                double nota = leia.nextDouble();
-                soma += nota;
-            }
-
-            medias[i] = soma / 4;
-
-            if (medias[i] >= 7.0) {
-                contadorAprovados++;
+            System.out.println("deseja informa outro numero 1= Sim 2=Não" );
+            if (leia.nextInt()== 2 ) {
+                finalizar = false;
             }
         }
 
-        System.out.println("Quantidade de alunos com média maior ou igual a 7.0: " + contadorAprovados);
+        System.out.println(" quantidade de que foram lidas "  );
+
+
 
         leia.close();
     }
