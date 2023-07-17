@@ -17,3 +17,4 @@ for numero in listNumeros:
 
 print("Ímpar:", inpar)
 print("Par:", par)
+print("numeros listrados:", listNumeros)
